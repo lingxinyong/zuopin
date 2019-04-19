@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maxium-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>详情页</title>
+    <link rel="stylesheet" href="./css/xiangqingye.css">
+    <script>
+        var pixelRatio = 1/window.devicePixelRatio;
+        document.write('<meta name="viewport" content="width=device-width,initial-scale='+ pixelRatio +',maxium-scale='+ pixelRatio +',user-scalable=no">');
+        var html = document.getElementsByTagName('html')[0];
+        var pageWidth = html.getBoundingClientRect().width;
+        html.style.fontSize = pageWidth / 10 + 'px';
+    </script>
+</head>
+<body>
+    <!-- 头部 -->
+    <header>
+        <a href="./index.html" class="header_lt"><img src="./img/back .png" alt=""></a>
+        <div class="header_middle" id="middle">
+            <a href="#" class="act">商品</a>
+            <a href="#">详情</a>
+            <a href="#">评价</a>
+        </div>
+        <script>
+            window.onload = function(){
+                var act = document.getElementById('middle').getElementsByTagName('a');
+                for(i = 0; i < act.length; i++){
+                    act[i].index = i;
+                    act[i].onclick = function(){
+                        for(j=0;j<act.length;j++){
+                            act[j].className = '';
+                        }
+                        act[this.index].className = 'act';
+                    }
+                }
+            }
+        </script>
+        <div class="header_rt">
+            <p>
+                <img src="./img/cart.png" alt="">
+                <span>2</span>
+            </p>
+            <i><img src="./img/xxmore.png" alt=""></i>
+        </div>
+    </header>
+    <!-- 内容 -->
+    <section>
+        <!-- banner图 -->
+        <div class="banner"><img src="./img/xbanner.png" alt=""></div>
+        <div class="jianjie">
+            <p>世果汇美国进口车厘子新鲜水果樱桃果径约26-28MM现摘现发包邮</p>
+            <div class="jianjie_rt">
+                <i><img src="./img/xfenxiang.png" alt=""></i>
+                <span>分享</span>
+            </div>
+        </div>
+        <div class="price">
+            <div class="price_promotion">
+                <p>￥<span>69</span>.9</p>
+                <span class="xrdc">夏日大促</span>
+                <span class="sjzx">手机专享价</span>
+            </div>
+            <span class="jiage">价格&nbsp;&nbsp;<del>￥89.9</del></span>
+        </div>
+        <div class="information">
+            <span>快递：8.00元</span>
+            <span>月销量：16笔</span>
+            <span>始发地：广州</span>
+        </div>
+        <div class="guarantee">
+            <p><i><img src="./img/round_check.png" alt=""></i><span>&nbsp;全程冷链</span></p>
+            <p><i><img src="./img/round_check.png" alt=""></i><span>&nbsp;现货秒发</span></p>
+            <p><i><img src="./img/round_check.png" alt=""></i><span>&nbsp;运费保障</span></p>
+            <i class="right"><img src="./img/xright.png" alt=""></i>
+        </div>
+        <!-- 优惠券 -->
+        <div class="coupon">
+            <div>
+                <p><i><img src="./img/youhui.png" alt=""></i><span>20元店铺优惠券</span></p>
+                <p class="quan"><i><img src="./img/youhui.png" alt=""></i><span>10元店铺优惠券</span></p>
+            </div>
+            <i class="right"><img src="./img/xright.png" alt=""></i>
+        </div>
+        <!-- 商品参数 -->
+        <div class="parameter">
+            <span>商品参数</span>
+            <i><img src="./img/xright.png" alt=""></i>
+        </div>
+        <!-- 宝贝评价 -->
+        <div class="evaluate">
+            <div class="evaluate_top">
+                <div class="evaluate_top_lt">宝贝评价（107）</div>
+                <div class="evaluate_top_rt">
+                    <p>好评度<span>90%</span></p>
+                    <i><img src="./img/xright.png" alt=""></i>
+                </div>
+            </div>
+            <!-- 顾客评价 -->
+            <div class="evaluate_customer">
+                <div class="customer_tit">
+                    <span><img src="./img/tou.png" alt=""></span>
+                    <p>泰*****</p>
+                    <i><img src="./img/xing.png" alt=""></i>
+                    <i><img src="./img/xing.png" alt=""></i>
+                    <i><img src="./img/xing.png" alt=""></i>
+                    <i><img src="./img/banxing.png" alt=""></i>
+                </div>
+                <p class="customer_point">水果很新鲜，包装绝对高大上，咬一口，水分多而且很甜，没有坏果子，埂子很绿，超出了预想中的水平。</p>
+                <div class="tp">
+                    <i><img src="./img/tp1.png" alt=""></i>
+                    <i><img src="./img/tp2.png" alt=""></i>
+                </div>
+                <span class="time">2017-07-01</span>
+            </div>
+            <!-- 顾客评价 -->
+            <div class="evaluate_customer">
+                <div class="customer_tit">
+                    <span><img src="./img/tou2.png" alt=""></span>
+                    <p>容*****</p>
+                    <i><img src="./img/xing.png" alt=""></i>
+                    <i><img src="./img/xing.png" alt=""></i>
+                    <i><img src="./img/xing.png" alt=""></i>
+                    <i><img src="./img/xing.png" alt=""></i>
+                    <i><img src="./img/xing.png" alt=""></i>
+                </div>
+                <p class="customer_point">收到打开一看很惊喜，车厘子个头大又甜，水分还很足哦，尝了一个酸酸甜甜的味道很不错，第一次购买，刚开始还比较忐忑，毕竟进口的水果价格比较贵，怕果子不好，看来以后可以安心买啦，希望卖家继续保质保量，还会再来。</p>
+                <span class="time">2017-07-01</span>
+            </div>
+            <!-- 查看全部评价 -->
+            <div class="btn"><a href="#">查看全部评价</a></div>
+        </div>
+        <!-- 世果汇水果旗舰店 -->
+        <div class="fruits">
+            <div class="fruits_tit">
+                <i><img src="./img/logo.png" alt=""></i>
+                <h3>世果汇水果旗舰店</h3>
+            </div>
+            <ul>
+                <li><span>4.1万</span><i>关注人数</i></li>
+                <li><span>71</span><i>全部商品</i></li>
+                <li><span>2</span><i>店铺动态</i></li>
+            </ul>
+            <div class="shangjia">
+                <p>
+                    <a href="#">咨询商家</a>
+                    <a href="#">进入店铺</a>
+                </p>
+            </div>
+        </div>
+        <!-- 大家都在买 -->
+        <div class="people">
+            <div class="people_tit">大家都在买</div>
+            <ul class="people_list">
+                <li>
+                    <i><img src="./img/pingguo.png" alt=""></i>
+                    <p>红富士1kg</p>
+                    <del>￥29</del>
+                    <span>￥19</span>
+                </li>
+                <li>
+                    <i><img src="./img/zao.png" alt=""></i>
+                    <p>大荔冬枣2kg</p>
+                    <del>￥29.9</del>
+                    <span>￥18.5</span>
+                </li>
+                <li>
+                    <i><img src="./img/huolongg.png" alt=""></i>
+                    <p>火龙果1kg</p>
+                    <del>￥26.9</del>
+                    <span>￥17.9</span>
+                </li>
+            </ul>
+        </div>
+        <!-- 图文详情 -->
+        <div class="tuwen">
+            <div class="tuwen_btn">
+                <i><img src="./img/fold.png" alt=""></i>
+                <span>&nbsp;上拉查看图文</span>
+            </div>
+            <div class="tp">
+                <i><img src="./img/1.png" alt=""></i>
+                <i><img src="./img/2.png" alt=""></i>
+                <i><img src="./img/3.png" alt=""></i>
+                <i><img src="./img/4.png" alt=""></i>
+                <i><img src="./img/5.png" alt=""></i>
+                <i><img src="./img/6.png" alt=""></i>
+            </div>
+        </div>
+    </section>
+    <!-- 尾部footer -->
+    <footer>
+        <div class="footer_left">
+            <a href="#">
+                <i><img src="./img/shop.png" alt=""></i>
+                <span>店铺</span>
+            </a>
+            <a href="#">
+                <i><img src="./img/kefu.png" alt=""></i>
+                <span>客服</span>
+            </a>
+            <a href="#">
+                <i><img src="./img/sc.png" alt=""></i>
+                <span>收藏</span>
+            </a>
+        </div>
+        <div class="footer_right">
+            <a href="#">加入购物车</a>
+            <a href="#">立即购买</a>
+        </div>
+    </footer>
+</body>
+</html>
